@@ -2,4 +2,4 @@
 
 #Search the current directory and all its subdirectories all files
 
-find ./*.sh | sort | cut -d . -f 2 | cut -d / -f 2 
+find . \( -name '*.sh' \) -print | sed 's/\(.*\)\///g' | sed 's/\.sh//g'
